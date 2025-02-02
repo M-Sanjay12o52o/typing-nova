@@ -8,8 +8,8 @@ const KeyboardComponent: FC<KeyboardComponentProps> = ({ activeKey }) => {
 
     const isKeyActive = (key: string) => activeKey.toLowerCase() === key.toLowerCase();
 
-    return <div>
-        <div>
+    return <div className='min-h-screen flex justify-center items-start'>
+        <div className='w-full max-w-[1000px] bg-gray-300 p-6 rounded-lg shadow-lg overflow-x-auto'>
             <div className="w-[1000px] h-auto bg-gray-300 p-6 rounded-lg shadow-lg">
                 {/* row 1 */}
                 <div className="flex space-x-2 mb-4">

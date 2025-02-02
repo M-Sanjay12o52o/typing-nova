@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { getServerSession } from "next-auth";
 import AuthProvider from "@/components/SessionProvider";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default async function RootLayout({
       >
         <AuthProvider session={session}>
           <main className="mx-auto max-w-5xl text-2xl flex gap-2 text-white">
+            <Navbar />
             {children}
           </main>
         </AuthProvider>
